@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Contacto from "./Contacto"
 import Inicio from "./Inicio"
 import logo from '../Archivos/Imagenes/logo.png'
+import ArteDigital from "./ArteDigital"
+
 const NavBar = () => {
     return (
         <Router>
@@ -19,6 +21,7 @@ const NavBar = () => {
             </Nav>
             <Routes>
                 <Route exact path='/' element={< Inicio />}></Route>
+                <Route exact path='/arte-digital' element={< ArteDigital />}></Route>
                 <Route exact path='/contacto' element={< Contacto />}></Route>
             </Routes>
         </Router>
