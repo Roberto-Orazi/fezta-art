@@ -108,7 +108,7 @@ textarea {
   margin: 0;
 }
 
-/*Nueva parte*/
+/* Nueva parte*/
 .loading-screen {
   height: 100vh;
   display: flex;
@@ -148,4 +148,21 @@ video {
   display: flex;
   justify-content: center;
   color: white;
+}
+
+
+.sticker-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.sticker {
+  position: relative;
+  margin: 0 auto;
+  width: 100px; /* ajusta según tus necesidades */
+  height: 100px; /* ajusta según tus necesidades */
+  /* Añade más estilos según sea necesario */
 }
