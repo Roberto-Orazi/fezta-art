@@ -1,0 +1,151 @@
+.App {
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: 'Urbanist', sans-serif;
+}
+
+h1 {
+  color: white;
+  font-size: 40px;
+}
+
+button {
+  color: black;
+  background-color: white;
+  padding: 10px;
+  margin: 5px 3px;
+  border: none;
+  border-radius: .3rem;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(227, 227, 222);
+}
+
+h4,
+h5 {
+  color: rgb(212, 212, 212);
+  font-size: 16px;
+}
+
+i {
+  color: rgb(212, 212, 212);
+  font-size: 30px;
+  margin: 5px 0;
+}
+
+/* NAVBAR*/
+.navfullsize {
+  width: 100%;
+}
+ul li{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+ul li a {
+  color: rgb(212, 212, 212);
+  text-decoration: none;
+  padding: 5px 20px;
+}
+
+ul li a:hover {
+
+  background-color: rgb(22, 22, 22);
+
+}
+
+/* contacto*/
+.labeltext {
+  color: white;
+  text-align: start;
+}
+
+.contactoform {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.form-group {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+input {
+  height: 30px;
+  width: 300px;
+}
+
+textarea {
+  min-width: 300px;
+  max-width: 300px;
+  max-height: 100px;
+  min-height: 70px;
+  font-family: 'Urbanist', sans-serif;
+}
+
+
+.numero-input::-webkit-inner-spin-button,
+.numero-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/*Nueva parte*/
+.loading-screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+
+video {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.content {
+  padding: 20px;
+}
+
+.dualForm{
+  display: flex;
+  flex-direction: row;
+}
+
+.dualForm input {
+  width: 80%;
+}
+
+.dualForm .labeltext {
+  margin-left: 15px;
+}
+
+.fileCharge{
+  background-color: white;
+  height: 20px;
+}
+
+.acercaDe{
+  display: flex;
+  justify-content: center;
+  color: white;
+}
