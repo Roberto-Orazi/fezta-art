@@ -23,7 +23,7 @@ const NavBar = () => {
             <Routes>
                 <Route exact path='/' element={< Inicio />}></Route>
                 <Route exact path='/arte-digital' element={< ArteDigital />}></Route>
-                <Route exact path='/cuadros' element={Cuadros}></Route>
+                <Route exact path='/cuadros' element={<Cuadros />}></Route>
                 <Route exact path='/contacto' element={< Contacto />}></Route>
             </Routes>
         </Router>

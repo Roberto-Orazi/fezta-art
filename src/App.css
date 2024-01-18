@@ -149,20 +149,25 @@ video {
   justify-content: center;
   color: white;
 }
-
-
-.sticker-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+.sticker {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  top: 0; /* Adjust top, bottom, left, right as needed */
+  z-index: -1;
+  margin-top: 100px;
 }
 
-.sticker {
-  position: relative;
-  margin: 0 auto;
-  width: 100px; /* ajusta según tus necesidades */
-  height: 100px; /* ajusta según tus necesidades */
-  /* Añade más estilos según sea necesario */
+.container-container {
+  position: relative; /* Ensure stickers are positioned relative to this container */
+  margin: 0 auto; /* Center the container */
+  max-width: 100%; /* Allow the container to take the full width of the viewport */
+}
+
+.sticker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 16px;
+  max-width: 1200px; /* Set the maximum width for the sticker grid */
+  margin: 0 auto; /* Center the sticker grid within the container */
 }

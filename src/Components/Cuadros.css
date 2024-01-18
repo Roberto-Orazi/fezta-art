@@ -8,15 +8,17 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 10px;
     padding: 20px;
-}
+    max-width: 1200px; /* Set the maximum width for the grid */
+    margin: 0 auto; /* Center the grid within the container */
+  }
 
-.grid-item {
+  .grid-item {
     position: relative;
     overflow: hidden;
-}
+  }
 
-.grid-item img {
+  .grid-item img {
     width: 100%;
     height: auto;
     display: block;
-}
+  }
