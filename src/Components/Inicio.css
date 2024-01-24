@@ -1,0 +1,29 @@
+.acercaDe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem auto;
+    color: white;
+    width: 1200px;
+    gap: 2rem;
+}
+
+h2 {
+    color: #d2c2b0;
+}
+
+.acercaDe-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.acercaDe-texto h2 {
+    font-size: 40px;
+    color: #d2c2b0;
+}
+
+.acercaDe-texto p {
+    font-size: 30px;
+    text-align: end;
+}

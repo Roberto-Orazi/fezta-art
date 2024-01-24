@@ -47,6 +47,8 @@ i {
 /* NAVBAR*/
 .navfullsize {
   width: 100%;
+  margin-top: -60px;
+  transition: margin-top 0.3s;
 }
 ul li{
   display: flex;
@@ -64,6 +66,20 @@ ul li a:hover {
 
   background-color: rgb(22, 22, 22);
 
+}
+.nav-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000000; /* Puedes cambiar el color de fondo según tu diseño */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregamos una sombra para dar profundidad */
+  z-index: 1000; /* Asegura que esté sobre otros elementos */
+  margin-top: 0; /* Asegura que no haya margen superior cuando es fijo */
+}
+
+/* Estilos para los elementos del navbar fijo */
+.nav-fixed ul li a {
+  padding: 0px 20px; /* Puedes ajustar según sea necesario */
 }
 
 /* contacto*/
@@ -142,32 +158,4 @@ video {
 .fileCharge{
   background-color: white;
   height: 20px;
-}
-
-.acercaDe{
-  display: flex;
-  justify-content: center;
-  color: white;
-}
-.sticker {
-  position: fixed;
-  width: 100%;
-  height: auto;
-  top: 0; /* Adjust top, bottom, left, right as needed */
-  z-index: -1;
-  margin-top: 100px;
-}
-
-.container-container {
-  position: relative; /* Ensure stickers are positioned relative to this container */
-  margin: 0 auto; /* Center the container */
-  max-width: 100%; /* Allow the container to take the full width of the viewport */
-}
-
-.sticker-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 16px;
-  max-width: 1200px; /* Set the maximum width for the sticker grid */
-  margin: 0 auto; /* Center the sticker grid within the container */
 }

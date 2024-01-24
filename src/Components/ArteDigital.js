@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import '../App.css';
 import firstSticker from '../Archivos/Imagenes/Kuni2sticker.png';
 import secondSticker from '../Archivos/Imagenes/emojisticker.png';
@@ -28,57 +28,81 @@ const stickers = [
   fifthSticker,
   sixthSticker,
   seventhSticker,
-  firstSticker,
-  secondSticker,
-  thirdSticker,
-  fourthSticker,
-  fifthSticker,
-  sixthSticker,
-  seventhSticker,
-  firstSticker,
-  secondSticker,
-  thirdSticker,
-  fourthSticker,
-  fifthSticker,
-  sixthSticker,
-  seventhSticker,
 ];
 
+/* const stickersMultiples = [
+  firstSticker,
+  secondSticker,
+  thirdSticker,
+  fourthSticker,
+  fifthSticker,
+  sixthSticker,
+  seventhSticker,
+  firstSticker,
+  secondSticker,
+  thirdSticker,
+  fourthSticker,
+  fifthSticker,
+  sixthSticker,
+  seventhSticker,
+  firstSticker,
+  secondSticker,
+  thirdSticker,
+  fourthSticker,
+  fifthSticker,
+  sixthSticker,
+  seventhSticker,
+]; */
 const ArteDigital = () => {
-  const [stickerPositions, setStickerPositions] = useState([]);
-
   useEffect(() => {
-    const generateRandomStickerPositions = () => {
-      const newPositions = stickers.map((sticker) => ({
-        src: sticker,
-        top: `${Math.random() * 100}vh`,
-        left: `${Math.random() * 100}vw`,
-      }));
-      setStickerPositions(newPositions);
+    const handleScroll = () => {
+      const stickers = document.querySelectorAll('.sticker-grid__2 img');
+      stickers.forEach((sticker, index) => {
+        const scrollY = window.scrollY;
+        const translateY = index * scrollY * 0.1; // Ajusta la velocidad de movimiento
+        const rotate = scrollY * 0.1; // Ajusta la velocidad de rotación
+
+        sticker.style.transform = `translateY(${translateY}px) rotate(${rotate}deg)`;
+      });
     };
 
-    generateRandomStickerPositions();
-  }, []);
+    window.addEventListener('scroll', handleScroll);
 
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <div className="container-container">
-      {stickerPositions.map((sticker, index) => (
-        <img
+      {/* <div className="sticker-grid">
+        {stickers.map((sticker, index) => (
+          <img
           key={index}
-          src={sticker.src}
+          src={sticker}
           alt={`Sticker ${index + 1}`}
           className="sticker"
-          style={{ top: sticker.top, left: sticker.left, width: '400px'}}
-        />
-      ))}
+          />
+          ))}
+        </div> */}
 
-      <div className="sticker-grid">
-        {photos.map((photo) => (
-          <div key={photo.id} className={`grid-item item${photo.id}`}>
-            <img src={photo.src} alt={photo.alt} />
-          </div>
+      <div className="sticker-grid__2">
+        {stickers.map((sticker, index) => (
+          <img
+            key={index}
+            src={sticker}
+            alt={`Sticker ${index + 1}`}
+            className={`sticker sticker-${index + 1}`}
+          />
         ))}
       </div>
+
+        <div className="photo-grid">
+          {photos.map((photo) => (
+            <div key={photo.id} className={`grid-item item${photo.id}`}>
+              <img src={photo.src} alt={photo.alt} />
+            </div>
+          ))}
+        </div>
     </div>
   );
 };

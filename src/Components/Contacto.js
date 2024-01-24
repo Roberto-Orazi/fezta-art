@@ -1,9 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap";
 import '../App.css';
-
+import './Contacto.css'
 const Contacto = () => {
     return (
-        <Container>
+        <Container className="container__contacto">
             <Row>
                 <Col><br /><h1>Contacto</h1></Col>
             </Row>
@@ -94,6 +94,12 @@ const Contacto = () => {
                 </Row>
 
             </Row>
+            <div className="redes_sociales">
+                <h4>
+                    Redes sociales
+                </h4>
+                <h4><a href="https://www.instagram.com/fezta.art/" target="blank">Instagram</a></h4>
+            </div>
         </Container>
     )
 }
