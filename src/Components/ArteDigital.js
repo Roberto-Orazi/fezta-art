@@ -8,16 +8,18 @@ import fifthSticker from '../Archivos/Imagenes/conejosticker.png';
 import sixthSticker from '../Archivos/Imagenes/guitarrasticker.png';
 import seventhSticker from '../Archivos/Imagenes/patolucassticker.png';
 import './Cuadros.css'; // Assuming "Cuadros.css" contains your additional styles
-import foto1 from '../Archivos/Imagenes/foto1.png';
-import foto2 from '../Archivos/Imagenes/foto2.png';
-import foto3 from '../Archivos/Imagenes/foto3.png';
+import foto1 from '../Archivos/Imagenes/digital1.jpg';
+import foto2 from '../Archivos/Imagenes/digital2.jpg';
+import foto3 from '../Archivos/Imagenes/digital3.jpg';
+import foto4 from '../Archivos/Imagenes/digital4.jpg';
+import foto5 from '../Archivos/Imagenes/digital5.jpg';
 
 const photos = [
   { id: 1, src: foto1, alt: 'Foto 1' },
   { id: 2, src: foto2, alt: 'Foto 2' },
   { id: 3, src: foto3, alt: 'Foto 3' },
-  { id: 4, src: foto2, alt: 'Foto 2' },
-  { id: 5, src: foto3, alt: 'Foto 3' },
+  { id: 4, src: foto4, alt: 'Foto 4' },
+  { id: 5, src: foto5, alt: 'Foto 5' },
 ];
 
 const stickers = [
@@ -96,13 +98,13 @@ const ArteDigital = () => {
         ))}
       </div>
 
-        <div className="photo-grid">
-          {photos.map((photo) => (
-            <div key={photo.id} className={`grid-item item${photo.id}`}>
-              <img src={photo.src} alt={photo.alt} />
-            </div>
-          ))}
-        </div>
+      <div className="photo-grid">
+        {photos.map((photo) => (
+          <div key={photo.id} className={`grid-item item${photo.id}`}>
+            <img src={photo.src} alt={photo.alt} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
