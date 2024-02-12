@@ -3,7 +3,7 @@ import '../App.css'
 import './Inicio.css'
 export default function inicio() {
     return (
-        <>
+        <section>
             <h1>
             <h2>"Imaginación sin límite"</h2>
             </h1>
@@ -17,6 +17,6 @@ export default function inicio() {
                 </div>
                 <img src={acercaDe} width={600} alt='pintor artista' />
             </div>
-        </>
+        </section>
     )
 }
