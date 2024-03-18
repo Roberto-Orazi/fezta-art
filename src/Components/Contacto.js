@@ -5,7 +5,7 @@ const Contacto = () => {
     return (
         <Container className="container__contacto">
             <Row>
-                <Col><br /><h1>Contacto o cotizacion</h1></Col>
+                <Col><br /><h1>Contacto</h1></Col>
             </Row>
             <Row className="contactoform">
 
