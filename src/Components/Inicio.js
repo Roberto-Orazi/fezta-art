@@ -15,7 +15,7 @@ export default function inicio() {
                         Combinar colores y crear figuras, personas o animales de una forma única y abstracta es lo que me caracteriza.
                     </p>
                 </div>
-                <img src={acercaDe} width={600} alt='pintor artista' />
+                <img src={acercaDe} width={800} alt='pintor artista' />
             </div>
         </section>
     )

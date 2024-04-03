@@ -22,47 +22,23 @@ const photos = [
   { id: 5, src: foto5, alt: 'Foto 5' },
 ];
 
-const stickers = [
-  firstSticker,
-  secondSticker,
-  thirdSticker,
-  fourthSticker,
-  fifthSticker,
-  sixthSticker,
-  seventhSticker,
-];
-
-/* const stickersMultiples = [
-  firstSticker,
-  secondSticker,
-  thirdSticker,
-  fourthSticker,
-  fifthSticker,
-  sixthSticker,
-  seventhSticker,
-  firstSticker,
-  secondSticker,
-  thirdSticker,
-  fourthSticker,
-  fifthSticker,
-  sixthSticker,
-  seventhSticker,
-  firstSticker,
-  secondSticker,
-  thirdSticker,
-  fourthSticker,
-  fifthSticker,
-  sixthSticker,
+/* const stickers = [ firstSticker, secondSticker, thirdSticker, fourthSticker, fifthSticker, sixthSticker,
   seventhSticker,
 ]; */
+
+const stickersMultiples = [ firstSticker, secondSticker, thirdSticker, fourthSticker, fifthSticker, sixthSticker,
+  seventhSticker, firstSticker, secondSticker, thirdSticker, fourthSticker, fifthSticker, sixthSticker, seventhSticker,
+  firstSticker, secondSticker, thirdSticker, fourthSticker, fifthSticker, sixthSticker, seventhSticker,
+];
+
 const ArteDigital = () => {
   useEffect(() => {
     const handleScroll = () => {
       const stickers = document.querySelectorAll('.sticker-grid__2 img');
       stickers.forEach((sticker, index) => {
         const scrollY = window.scrollY;
-        const translateY = index * scrollY * 0.1; // Ajusta la velocidad de movimiento
-        const rotate = scrollY * 0.1; // Ajusta la velocidad de rotación
+        const translateY = index * scrollY * 0.1;
+        const rotate = scrollY * 0.1;
 
         sticker.style.transform = `translateY(${translateY}px) rotate(${rotate}deg)`;
       });
@@ -88,7 +64,7 @@ const ArteDigital = () => {
         </div> */}
 
       <div className="sticker-grid__2">
-        {stickers.map((sticker, index) => (
+        {stickersMultiples.map((sticker, index) => (
           <img
             key={index}
             src={sticker}
